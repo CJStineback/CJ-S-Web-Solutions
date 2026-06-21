@@ -158,6 +158,36 @@ section h2 {
     border: 1px solid #334155;
 }
 
+.protfolio-feature-card {
+    max-width: 1000px;
+    margin: 0 auto 60px;
+    padding: 35px;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 18px;
+}
+
+.portfolio-feature-card h2 {
+    text-align: center;
+    color: #38bdf8;
+    margin-bottom: 25px;
+}
+
+.portfolio-screenshots {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.portfolio-screenshots img {
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    border: 2px solid rgba(56, 189, 248, 0.25);
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.15);
+}
+
 /* About */
 
 #about p {
@@ -212,6 +242,14 @@ button {
 
 button:hover {
     transform: translateY(-3px);
+}
+
+.cta-section {
+    text-align: center;
+}
+
+.cta-section .btn {
+    display: inline-block;   
 }
 
 /* Footer */
@@ -339,4 +377,152 @@ footer {
     to {
         transform: translateY(-100px);
     }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-box {
+    width: 73px;
+    height: 65px;
+
+    background: #38bdf8;
+    color: #0f172a;
+
+    font-size: 1.7rem;
+    font-weight: 800;
+
+    border-radius: 14px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow:
+        0 0 15px rgba(56,189,248,.5),
+        0 0 35px rgba(56,189,248,.3);
+
+    transition: .3s ease;
+}
+
+.logo-box:hover {
+    transform: scale(1.05);
+}
+
+.logo-text {
+    color: white;
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: 1rem;
+}
+
+.pricing-section {
+    text-align: center;
+}
+
+.section-intro {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    color: #cbd5e1;
+}
+
+.pricing-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pricing-card {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 18px;
+    padding: 35px;
+    width: 320px;
+    transition: 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.pricing-card.featured {
+    border: 2px solid #38bdf8;
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.25);
+}
+
+.pricing-card h3 {
+    font-size: 1.7rem;
+    color: #38bdf8;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.price span {
+    font-size: 1rem;
+    color: #cbd5e1;
+}
+
+.pricing-card ul {
+    list-style: none;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.pricing-card li {
+    margin-bottom: 12px;
+    color: #e2e8f0;
+}
+
+.pricing-card li::before {
+    content: "✓ ";
+    color: #38bdf8;
+    font-weight: bold;
+}
+
+.portfolio-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-card {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 18px;
+    padding: 30px;
+    width: 320px;
+    transition: 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.project-card h2 {
+    color: #38bdf8;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    margin-bottom: 20px;
+}
+
+.btn {
+    margin-top: 2.5rem; /* creates space between the subtitle and button */
 }
