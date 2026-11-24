@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book a free 30-minute website consultation with CJ's Web Solutions or send a message about your project.">
     <title>CJ Web Solutions | Contact</title>
 
     <link rel="stylesheet" href="style.css">
@@ -10,7 +11,7 @@
 </head>
 <body>
 
-    <div class="background-animation">
+    <div class="background-animation" aria-hidden="true">
         <span></span><span></span><span></span>
         <span></span><span></span><span></span>
     </div>
@@ -27,40 +28,134 @@
                 <li><a href="services.html">Services</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="contact">
-        <h2>Contact</h2>
+    <main>
+        <section id="contact" class="contact-page">
+            <div class="contact-intro">
+                <p class="eyebrow">LET'S TALK ABOUT YOUR WEBSITE</p>
+                <h1>Start Your Project</h1>
+                <p>Book a free video consultation to talk through your ideas, or send a message if you would rather start by email.</p>
+            </div>
 
-        <form action="https://formspree.io/f/xgoqbajr" method="POST">
-            <input
-                type="text"
-                name="name"
-                placeholder="Your Name"
-                required>
+            <div class="booking-card">
+                <div class="booking-copy">
+                    <p class="eyebrow">FREE CONSULTATION</p>
+                    <h2>Book a 30-Minute Video Call</h2>
+                    <p>Choose an available time below. We will meet online using Cal Video, so there is no travel, account, or software download required.</p>
 
-            <input
-                type="email"
-                name="email"
-                placeholder="Your Email"
-                required>
+                    <ul class="booking-details" aria-label="Consultation details">
+                        <li><strong>Length:</strong> 30 minutes</li>
+                        <li><strong>Availability:</strong> Monday–Friday, 6:00–9:30 PM Central</li>
+                        <li><strong>Location:</strong> Online through Cal Video</li>
+                        <li><strong>Cost:</strong> Free</li>
+                    </ul>
 
-            <textarea
-                name="message"
-                placeholder="Tell me about your project..."
-                rows="8"
-                required></textarea>
+                    <a class="btn booking-link" href="https://cal.com/cjswebsolutions/30min" target="_blank" rel="noopener noreferrer">Open Scheduler in a New Tab</a>
+                </div>
 
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+                <div class="cal-embed-shell">
+                    <div id="my-cal-inline-30min" class="cal-embed" aria-label="Book a free website consultation"></div>
+                    <noscript>
+                        <p>JavaScript is required for the embedded calendar. <a href="https://cal.com/cjswebsolutions/30min">Open the scheduler here.</a></p>
+                    </noscript>
+                </div>
+            </div>
 
-    <!-- Footer -->
+            <div class="consultation-steps">
+                <h2>How the Consultation Works</h2>
+                <div class="steps-grid">
+                    <article class="step-card">
+                        <span>1</span>
+                        <h3>Pick a Time</h3>
+                        <p>Select a time that works for you and answer a few quick questions about your project.</p>
+                    </article>
+                    <article class="step-card">
+                        <span>2</span>
+                        <h3>Check Your Email</h3>
+                        <p>You will receive a confirmation with the Cal Video meeting link and appointment details.</p>
+                    </article>
+                    <article class="step-card">
+                        <span>3</span>
+                        <h3>Join the Call</h3>
+                        <p>Open the meeting link at your scheduled time. We will discuss your goals, needs, and next steps.</p>
+                    </article>
+                </div>
+            </div>
+
+            <div class="contact-divider"><span>OR SEND A MESSAGE</span></div>
+
+            <div class="contact-form-card">
+                <h2>Tell Me About Your Project</h2>
+                <p>Not ready to schedule yet? Send a message and I will get back to you by email.</p>
+
+                <form action="https://formspree.io/f/xgoqbajr" method="POST">
+                    <label for="name">Name</label>
+                    <input id="name" type="text" name="name" placeholder="Your name" autocomplete="name" required>
+
+                    <label for="email">Email</label>
+                    <input id="email" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+
+                    <label for="message">Project details</label>
+                    <textarea id="message" name="message" placeholder="Tell me about your project..." rows="8" required></textarea>
+
+                    <input type="hidden" name="_subject" value="New website inquiry from CJ's Web Solutions">
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
     <footer>
         <p>&copy; 2026 CJ's Web Solutions. All Rights Reserved.</p>
     </footer>
+
+    <!-- Cal inline embed code begins -->
+    <script type="text/javascript">
+        (function (C, A, L) {
+            var p = function (a, ar) { a.q.push(ar); };
+            var d = C.document;
+            C.Cal = C.Cal || function () {
+                var cal = C.Cal;
+                var ar = arguments;
+                if (!cal.loaded) {
+                    cal.ns = {};
+                    cal.q = cal.q || [];
+                    d.head.appendChild(d.createElement("script")).src = A;
+                    cal.loaded = true;
+                }
+                if (ar[0] === L) {
+                    var api = function () { p(api, arguments); };
+                    var namespace = ar[1];
+                    api.q = api.q || [];
+                    if (typeof namespace === "string") {
+                        cal.ns[namespace] = cal.ns[namespace] || api;
+                        p(cal.ns[namespace], ar);
+                        p(cal, ["initNamespace", namespace]);
+                    } else {
+                        p(cal, ar);
+                    }
+                    return;
+                }
+                p(cal, ar);
+            };
+        })(window, "https://app.cal.com/embed/embed.js", "init");
+
+        Cal("init", "30min", { origin: "https://app.cal.com" });
+        Cal.ns["30min"]("inline", {
+            elementOrSelector: "#my-cal-inline-30min",
+            calLink: "cjswebsolutions/30min",
+            config: { layout: "month_view", theme: "dark" }
+        });
+        Cal.ns["30min"]("ui", {
+            hideEventTypeDetails: false,
+            layout: "month_view",
+            theme: "dark"
+        });
+    </script>
+    <!-- Cal inline embed code ends -->
 </body>
 </html>
